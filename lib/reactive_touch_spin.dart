@@ -92,8 +92,8 @@ class ReactiveTouchSpin<T> extends ReactiveFormField<T, num> {
     num step = 1.0,
     double iconSize = 24.0,
     NumberFormat? displayFormat,
-    Icon subtractIcon = const Icon(Icons.remove),
-    Icon addIcon = const Icon(Icons.add),
+    Widget subtractIcon = const Icon(Icons.remove),
+    Widget addIcon = const Icon(Icons.add),
     EdgeInsets iconPadding = const EdgeInsets.all(4.0),
     TextStyle textStyle = const TextStyle(fontSize: 24),
     Color? iconActiveColor,
@@ -106,9 +106,8 @@ class ReactiveTouchSpin<T> extends ReactiveFormField<T, num> {
           validationMessages: validationMessages,
           showErrors: showErrors,
           builder: (field) {
-            final InputDecoration effectiveDecoration = (decoration ??
-                    const InputDecoration())
-                .applyDefaults(Theme.of(field.context).inputDecorationTheme);
+            final InputDecoration effectiveDecoration =
+                (decoration ?? const InputDecoration()).applyDefaults(Theme.of(field.context).inputDecorationTheme);
 
             return Listener(
               onPointerDown: (_) {
