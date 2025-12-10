@@ -1,3 +1,6 @@
+## [0.8.4]
+* Icon now Widget
+
 ## [0.8.3]
 * package version bump
 
